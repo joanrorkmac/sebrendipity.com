@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tea Room — Livre d'or et espace de partage. Sebrendipity, poterie artisanale par Sebastien Besson.">
+  <title>Tea Room — Sebrendipity</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Aller au contenu principal</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-logo"><img src="images/logo.jpeg" alt="Sebrendipity — sceau" width="40" height="40"> Sebrendipity</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+        <span class="nav-toggle-icon"></span>
+      </label>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="actualite.html">Actualite</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="tearoom.html" aria-current="page">Tea Room</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <section class="page-hero section">
+      <div class="container">
+        <h1>Tea Room</h1>
+        <p class="subtitle">
+          Le Tea Room... pour echanger avec vous et lire vos commentaires.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2>Livre d'or</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-xl);">
+          Quelques mots laisses par les visiteurs.
+        </p>
+
+        <div class="guestbook-list">
+
+          <blockquote class="guestbook-entry">
+            <p>De tres belles creations, chaque piece raconte une histoire. Bravo pour ce travail magnifique !</p>
+            <footer class="guestbook-author">
+              <cite>Marie L.</cite>
+              <time datetime="2026-02-15">15 fevrier 2026</time>
+            </footer>
+          </blockquote>
+
+          <blockquote class="guestbook-entry">
+            <p>J'ai decouvert l'atelier lors des portes ouvertes. Une ambiance chaleureuse et des pieces superbes. Je recommande vivement.</p>
+            <footer class="guestbook-author">
+              <cite>Philippe D.</cite>
+              <time datetime="2026-01-20">20 janvier 2026</time>
+            </footer>
+          </blockquote>
+
+          <blockquote class="guestbook-entry">
+            <p>La theiere que j'ai acquise est devenue ma piece preferee. Un vrai savoir-faire artisanal, merci Sebastien !</p>
+            <footer class="guestbook-author">
+              <cite>Yuko T.</cite>
+              <time datetime="2025-12-10">10 decembre 2025</time>
+            </footer>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="two-col">
+
+          <div class="prose">
+            <h2>Laisser un message</h2>
+            <p>
+              Partagez votre experience, vos impressions ou un mot d'encouragement. Votre message sera publie dans le livre d'or apres validation.
+            </p>
+            <p style="font-size: var(--text-sm); color: var(--color-text-muted);">
+              Les messages sont moderes avant publication. Votre adresse e-mail ne sera pas affichee.
+            </p>
+          </div>
+
+          <div>
+            <form
+              action="https://formspree.io/f/VOTRE_ID_TEAROOM"
+              method="POST"
+              aria-label="Formulaire du livre d'or"
+            >
+              <!-- Formspree: redirect after submission -->
+              <input type="hidden" name="_next" value="merci.html">
+
+              <!-- Formspree: custom email subject -->
+              <input type="hidden" name="_subject" value="Nouveau message — Livre d'or — Sebrendipity">
+
+              <!-- Honeypot anti-spam (hidden from humans) -->
+              <div class="form-honey" aria-hidden="true">
+                <label for="website-tearoom">Ne pas remplir ce champ</label>
+                <input type="text" id="website-tearoom" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-name">Nom *</label>
+                <input type="text" id="guestbook-name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-email">E-mail *</label>
+                <span class="hint">Votre adresse ne sera pas publiee.</span>
+                <input type="email" id="guestbook-email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-message">Message *</label>
+                <textarea id="guestbook-message" name="message" rows="5" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-captcha">Verification : combien font 3 + 4 ? *</label>
+                <input
+                  type="text"
+                  id="guestbook-captcha"
+                  name="captcha"
+                  required
+                  pattern="7"
+                  title="Veuillez entrer le resultat de 3 + 4"
+                  autocomplete="off"
+                  inputmode="numeric"
+                  maxlength="2"
+                >
+              </div>
+
+              <button type="submit" class="btn btn-primary">Envoyer mon message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="share-bar">
+        <span>Partager :</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://sebrendipity.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://api.whatsapp.com/send?text=Sebrendipity%20%E2%80%94%20Poterie%20artisanale%20https://sebrendipity.com" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://twitter.com/intent/tweet?url=https://sebrendipity.com&text=Sebrendipity%20%E2%80%94%20Poterie%20artisanale" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://sebrendipity.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:?subject=Sebrendipity%20%E2%80%94%20Poterie%20artisanale&body=Decouvrez%20les%20creations%20de%20Sebastien%20Besson%20:%20https://sebrendipity.com">E-mail</a>
+      </div>
+      <p>&copy; 2026 Sebrendipity — Sebastien Besson. Tous droits reserves.</p>
+      <p><a href="mailto:sebtsuna@gmail.com">sebtsuna@gmail.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
