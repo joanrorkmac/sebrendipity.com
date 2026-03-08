@@ -754,6 +754,22 @@ h3 { font-size: var(--text-xl); margin-bottom: var(--space-sm); }
 
 /* --- Share Bar --- */
 
+.social-link {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.social-link a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-link a:hover,
+.social-link a:focus {
+  text-decoration: underline;
+}
+
 .share-bar {
   display: flex;
   flex-wrap: wrap;
