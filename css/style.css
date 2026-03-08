@@ -9,8 +9,8 @@
 
 :root {
   /* Colors: Warm Earth / Pottery Tones */
-  --color-bg:           #FAF8F5;
-  --color-bg-alt:       #F0EDE8;
+  --color-bg:           #FBF7F0;
+  --color-bg-alt:       #F3EDE2;
   --color-surface:      #FFFFFF;
   --color-text:         #2D2926;
   --color-text-muted:   #706B65;
@@ -661,7 +661,7 @@ h3 { font-size: var(--text-xl); margin-bottom: var(--space-sm); }
 /* --- Event Band (Accueil) --- */
 
 .event-band {
-  background-color: #8B6B8D;
+  background-color: #8B5E3C;
   color: var(--color-surface);
   padding-block: var(--space-md);
   text-align: center;
@@ -779,7 +779,7 @@ h3 { font-size: var(--text-xl); margin-bottom: var(--space-sm); }
   border-radius: var(--radius);
   font-size: var(--text-xs);
   color: #FFFFFF;
-  background-color: #8B6B8D;
+  background-color: #9B7B40;
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.2s;
