@@ -5,6 +5,17 @@
    Hamburger menu via checkbox hack (CSS-only).
    =================================================================== */
 
+/* --- Custom Fonts --- */
+
+@font-face {
+  font-family: 'Gak Tahu';
+  src: url('../fonts/Gak Tahu.otf') format('opentype'),
+       url('../fonts/Gak Tahu.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Design Tokens (Custom Properties) --- */
 
 :root {
@@ -20,7 +31,7 @@
   --color-focus:        #A0522D;
 
   /* Typography: System Font Stack */
-  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-heading: 'Gak Tahu', 'Georgia', 'Times New Roman', serif;
   --font-body:    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
   /* Type Scale (rem) */
